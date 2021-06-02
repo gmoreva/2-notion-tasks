@@ -9,6 +9,7 @@ services:
       - NOTION_TASK_DB=${NOTION_TASK_DB}
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - TELEGRAM_OWNER_ID=${TELEGRAM_OWNER_ID}
+      - TELEGRAM_ALLOW_IDS=${TELEGRAM_ALLOW_IDS}
 networks:
   reverse-proxy:
     external:
