@@ -1,0 +1,35 @@
+POST https://api.notion.com/v1/pages
+Authorization: Bearer {{token}}
+Notion-Version: 2021-05-13
+Content-Type: application/json
+
+{
+    "parent": { "database_id": "12b4f5b90c1a42cabe1ccbf9867d6790" },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "Yurts in Big Sur, California"
+            }
+          }
+        ]
+      },
+      "Status": {
+        "select": {
+          "name": "Backlog"
+        }
+      },
+      "Source": {
+        "select": {
+          "name": "Telegram"
+        }
+      }
+    }
+  }
+
+###
+
+GET https://api.notion.com/v1/databases
+Authorization: Authorization: Bearer {{token}}
+Notion-Version: 2021-05-13
