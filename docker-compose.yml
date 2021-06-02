@@ -1,6 +1,6 @@
 version: "2"
 services:
-  socketio:
+  app:
     build:
       context: .
     restart: always
