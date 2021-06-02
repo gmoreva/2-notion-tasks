@@ -4,7 +4,7 @@ Notion-Version: 2021-05-13
 Content-Type: application/json
 
 {
-    "parent": { "database_id": "12b4f5b90c1a42cabe1ccbf9867d6790" },
+    "parent": { "database_id": "{{taskDB}}" },
     "properties": {
       "Name": {
         "title": [

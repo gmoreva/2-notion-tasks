@@ -1,0 +1,15 @@
+version: "2"
+services:
+  socketio:
+    build:
+      context: .
+    restart: always
+    environment:
+      - NOTION_TOKEN=${NOTION_TOKEN}
+      - NOTION_TASK_DB=${NOTION_TASK_DB}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_OWNER_ID=${TELEGRAM_OWNER_ID}
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
