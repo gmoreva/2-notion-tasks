@@ -1,20 +1,19 @@
 import {Client} from '@notionhq/client';
 import {CreatePageResponse} from "@notionhq/client/build/src/api-endpoints";
-
-require('dotenv').config();
+import env from '../../env';
 
 if (
-    !process.env!.NOTION_TOKEN
-    || !process.env!.NOTION_TASK_DB
+    !env.NOTION_TOKEN
+    || !env.NOTION_TASK_DB
 ) {
     throw new Error('env parameter error')
 }
 
 const notion = new Client({
-    auth: process.env!.NOTION_TOKEN,
+    auth: env!.NOTION_TOKEN,
 })
 
-const taskDB = process.env!.NOTION_TASK_DB
+const taskDB = env!.NOTION_TASK_DB
 
 export function createTask(title: string, tgAuthor: string): Promise<CreatePageResponse> {
     return notion.pages.create({

@@ -1,17 +1,16 @@
 import { Telegraf, Context } from 'telegraf';
-import { createTask } from '../notion/connector'
-require('dotenv').config();
-
+import { createTask } from '../notion/connector';
+import env from '../../env';
 if (
-    !process.env.TELEGRAM_BOT_TOKEN
-    || !process.env.TELEGRAM_OWNER_ID
-    || !process.env.TELEGRAM_ALLOW_IDS
+    !env.TELEGRAM_BOT_TOKEN
+    || !env.TELEGRAM_OWNER_ID
+    || !env.TELEGRAM_ALLOW_IDS
     ) {
     throw new Error('env parameter error')
 }
-const bot = new Telegraf(process.env!.TELEGRAM_BOT_TOKEN)
-const telegramownerid = Number(process.env!.TELEGRAM_OWNER_ID)
-const allowTelegramIds = process.env!.TELEGRAM_ALLOW_IDS.split(',').map(e => Number(e))
+const bot = new Telegraf(env!.TELEGRAM_BOT_TOKEN)
+const telegramownerid = Number(env!.TELEGRAM_OWNER_ID)
+const allowTelegramIds = env!.TELEGRAM_ALLOW_IDS.split(',').map(e => Number(e))
 console.log({
     allowTelegramIds,
     telegramownerid

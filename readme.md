@@ -1,0 +1,10 @@
+**
+required environment variables
+**
+NOTION_TOKEN
+NOTION_TASK_DB
+TELEGRAM_BOT_TOKEN
+TELEGRAM_OWNER_ID
+TELEGRAM_ALLOW_IDS
+RUN_CRON
+____________________________________________________________________________
