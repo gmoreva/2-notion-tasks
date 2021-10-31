@@ -1,10 +1,23 @@
-**
-required environment variables
-**
-NOTION_TOKEN
-NOTION_TASK_DB
-TELEGRAM_BOT_TOKEN
-TELEGRAM_OWNER_ID
-TELEGRAM_ALLOW_IDS
-RUN_CRON
+# Бот для интеграции Telegram с notion
+
+В рамках [урока](https://amorev.ru/telegram-notion-integration) был разработан данный репозиторий, в котором реализован бот, создающий задачу в backlog на каждое сообщение от администратора
+
+## Инструкция по запуску
+
+Для запуска необходимо склонировать репозиторий, установить зависимости, прописать переменные окружения и запустить
+
+```bash
+npm i
+npm start
+```
+
+После чего можно писать вашему боту любые сообщения и он создаст из них задачи
+
+## Обязательные переменные окружения для бота
+
+NOTION_TOKEN - токен из Notion
+NOTION_TASK_DB - идентификатор базы данных задач
+TELEGRAM_BOT_TOKEN - токен вашего Telegram бота
+TELEGRAM_OWNER_ID - telegram id владельца
+TELEGRAM_ALLOW_IDS - telegram id тех, кто может ставить владельцу задачи
 ____________________________________________________________________________

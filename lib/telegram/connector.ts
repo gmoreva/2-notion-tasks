@@ -29,7 +29,7 @@ bot.on('message', async function (ctx: Context) {
                 throw new Error('empty message')
             }
             const result = await createTask(ctx.message.text, ctx.message.from.username)
-            let replace = result.id.replace(/-/g, '')
+            let replace = result.id.replace(/-/g, '') // конвертируем id в рабочий для ссылки
             let args = 'Task created - [' + ctx.message.text + '](https://www.notion.so/' + replace + ')'
             await ctx.reply(args, {
                 parse_mode: "Markdown"

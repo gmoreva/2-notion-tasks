@@ -9,11 +9,9 @@ if (
     throw new Error('env parameter error')
 }
 
-const notion = new Client({
-    auth: env!.NOTION_TOKEN,
-})
+const notion = new Client({auth: env!.NOTION_TOKEN}) //Токен из Notion
 
-const taskDB = env!.NOTION_TASK_DB
+const taskDB = env!.NOTION_TASK_DB // ID базы данных задач в Notion
 
 export function createTask(title: string, tgAuthor: string): Promise<CreatePageResponse> {
     return notion.pages.create({
