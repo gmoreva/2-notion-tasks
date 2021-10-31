@@ -16,8 +16,11 @@ npm start
 ## Обязательные переменные окружения для бота
 
 NOTION_TOKEN - токен из Notion
+
 NOTION_TASK_DB - идентификатор базы данных задач
+
 TELEGRAM_BOT_TOKEN - токен вашего Telegram бота
+
 TELEGRAM_OWNER_ID - telegram id владельца
 
 ## Возможность отправлять задачи другими постановщиками
