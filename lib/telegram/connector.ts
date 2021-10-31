@@ -1,16 +1,10 @@
 import { Telegraf, Context } from 'telegraf';
 import { createTask } from '../notion/connector';
 import env from '../../env';
-import config from '../../config.json';
-if (
-    !env.TELEGRAM_BOT_TOKEN
-    || !env.TELEGRAM_OWNER_ID
-    ) {
-    throw new Error('env parameter error')
-}
+
 const bot = new Telegraf(env!.TELEGRAM_BOT_TOKEN)
 const telegramownerid = Number(env!.TELEGRAM_OWNER_ID)
-const allowTelegramIds = config.allowedTelegramIds
+const allowTelegramIds = env!.TELEGRAM_ALLOW_IDS.split(',').map(e => Number(e))
 console.log({
     allowTelegramIds,
     telegramownerid
