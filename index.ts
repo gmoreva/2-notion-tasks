@@ -1,2 +1,2 @@
-import { tConnectorRun } from './lib/telegram/connector'
-tConnectorRun()
+import telegramConnector from './lib/telegram/connector'
+telegramConnector.run()

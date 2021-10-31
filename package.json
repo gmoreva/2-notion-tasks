@@ -1,5 +1,5 @@
 {
-  "name": "amorevBot",
+  "name": "amorev_bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.ts",
-    "build": "tsc",
-    "dev": "nodemon index.ts"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
